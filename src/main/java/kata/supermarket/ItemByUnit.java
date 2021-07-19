@@ -10,6 +10,10 @@ public class ItemByUnit implements Item {
         this.product = product;
     }
 
+    public String getId() {
+        return product.getId();
+    }
+
     public BigDecimal price() {
         return product.pricePerUnit();
     }
