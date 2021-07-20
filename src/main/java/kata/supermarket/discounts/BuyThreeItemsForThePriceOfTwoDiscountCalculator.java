@@ -1,15 +1,18 @@
 package kata.supermarket.discounts;
 
+
 import kata.supermarket.Basket;
+import kata.supermarket.Item;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 public class BuyThreeItemsForThePriceOfTwoDiscountCalculator implements DiscountCalculator {
 
-    private final Basket basket;
+    private final List<Item> items;
 
-    public BuyThreeItemsForThePriceOfTwoDiscountCalculator(Basket basket) {
-        this.basket = basket;
+    public BuyThreeItemsForThePriceOfTwoDiscountCalculator(List<Item> items) {
+        this.items = items;
     }
 
     @Override

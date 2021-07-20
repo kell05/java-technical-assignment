@@ -10,6 +10,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -20,10 +21,9 @@ class BuyOneGetOneFreeDiscountCalculatorTest {
     @DisplayName("discount when applying buy one get one free containing...")
     @MethodSource
     @ParameterizedTest(name = "{0}")
-    void basketTotalDiscount(String description, String expectedDiscount, Iterable<Item> items) {
-        final Basket basket = new Basket();
-        items.forEach(basket::add);
-        assertEquals(new BuyOneGetOneFreeDiscountCalculator(basket).getDiscount(), new BigDecimal(expectedDiscount));
+    void basketTotalDiscount(String description, String expectedDiscount, List<Item> items) {
+
+        assertEquals(new BuyOneGetOneFreeDiscountCalculator(items).getDiscount(), new BigDecimal(expectedDiscount));
     }
     static Stream<Arguments> basketTotalDiscount() {
         return Stream.of(

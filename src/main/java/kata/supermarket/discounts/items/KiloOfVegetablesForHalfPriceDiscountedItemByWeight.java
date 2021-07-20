@@ -11,6 +11,5 @@ public class KiloOfVegetablesForHalfPriceDiscountedItemByWeight extends ItemByWe
     public KiloOfVegetablesForHalfPriceDiscountedItemByWeight(WeighedProduct product, BigDecimal weightInKilos) {
         super(product, weightInKilos);
     }
-
 }
 

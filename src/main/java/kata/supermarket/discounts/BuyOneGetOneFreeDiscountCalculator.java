@@ -1,10 +1,12 @@
 package kata.supermarket.discounts;
 
 import kata.supermarket.Basket;
+import kata.supermarket.Item;
 import kata.supermarket.discounts.DiscountCalculator;
 
 import java.math.BigDecimal;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
@@ -14,10 +16,10 @@ import java.util.stream.Collectors;
  */
 public class BuyOneGetOneFreeDiscountCalculator implements DiscountCalculator {
 
-    private final Basket basket;
+    private final List<Item> items;
 
-    BuyOneGetOneFreeDiscountCalculator(Basket basket) {
-        this.basket = basket;
+    BuyOneGetOneFreeDiscountCalculator(List<Item> items) {
+        this.items = items;
     }
 
     @Override
