@@ -3,6 +3,7 @@ package kata.supermarket.discounts;
 import kata.supermarket.Basket;
 import kata.supermarket.Item;
 import kata.supermarket.discounts.DiscountCalculator;
+import kata.supermarket.discounts.items.BuyOneGetOneFreeDiscountedItemByUnit;
 
 import java.math.BigDecimal;
 import java.util.HashMap;
@@ -24,6 +25,13 @@ public class BuyOneGetOneFreeDiscountCalculator implements DiscountCalculator {
 
     @Override
     public BigDecimal getDiscount() {
+        // TODO: Calculate based on items being BuyOneGetOneFreeDiscountedItemByUnit
+
+        for (Item i : items){
+            if (i instanceof BuyOneGetOneFreeDiscountedItemByUnit){
+                System.out.println("Do calculation");
+            }
+        }
         return BigDecimal.ZERO;
     }
 }
