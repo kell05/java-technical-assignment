@@ -4,11 +4,11 @@ import kata.supermarket.Basket;
 
 import java.math.BigDecimal;
 
-public class BuyThreeItemsDorThePriceOfTwoDiscountCalculator implements DiscountCalculator {
+public class BuyThreeItemsForThePriceOfTwoDiscountCalculator implements DiscountCalculator {
 
     private final Basket basket;
 
-    public BuyThreeItemsDorThePriceOfTwoDiscountCalculator(Basket basket) {
+    public BuyThreeItemsForThePriceOfTwoDiscountCalculator(Basket basket) {
         this.basket = basket;
     }
 

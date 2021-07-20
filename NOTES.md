@@ -1,3 +1,34 @@
 # Notes
 
-Please add here any notes, assumptions and design decisions that might help up understand your though process.
+The purpose of this code was a technical test for Policy Expert.
+
+
+### Design
+Each new 
+
+
+
+### Order of tasks undertaken
+
+Breakdown of tasks in order 
+1. Add Identification of Product.  This will allow is to apply the discounts based on the same Product or quantity of product(ItemByWeight)
+1. Adding a sub class of each Item (ItemByUnit, ItemByWeight) in which to identify the products which are part of a specific discount.
+1. Added Dis
+1. Create an iterable of all the code which calculates discounts to determine the total discount 
+
+
+
+### Problems with the code
+* Increasing information leak between the Product and Item based classes
+* With the current code we cannot apply multiple discounts to the same products, which I believe is common in the USA.
+* Ideally would have added some 
+* Lacking in tests.  I was aiming to show more of the arch of the design that I was creating and how that would
+* Changed the visibility of the ItemByWeight and ItemByUnit code for ease of modification
+
+### Terminology
+This was for my benefit to understand the existing code.
+
+Product - The item which can be purchased.  
+Item - The quantity of the product the customer bought of the Product.
+
+

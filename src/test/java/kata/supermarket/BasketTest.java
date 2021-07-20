@@ -1,5 +1,6 @@
 package kata.supermarket;
 
+import kata.supermarket.discounts.items.BuyOneGetOneFreeDiscountedItemByUnit;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -29,9 +30,12 @@ class BasketTest {
                 aSingleItemPricedPerUnit(),
                 multipleItemsPricedPerUnit(),
                 aSingleItemPricedByWeight(),
-                multipleItemsPricedByWeight()
+                multipleItemsPricedByWeight(),
+                aSingleBuyOneGetOneFreeDiscountedItemByUnit()
         );
     }
+
+
 
     private static Arguments aSingleItemPricedByWeight() {
         return Arguments.of("a single weighed item", "1.25", Collections.singleton(twoFiftyGramsOfAmericanSweets()));
@@ -50,6 +54,10 @@ class BasketTest {
 
     private static Arguments aSingleItemPricedPerUnit() {
         return Arguments.of("a single item priced per unit", "0.49", Collections.singleton(aPintOfMilk()));
+    }
+
+    private static Arguments aSingleBuyOneGetOneFreeDiscountedItemByUnit() {
+        return Arguments.of("a single buy one get one free priced per unit", "0.49", Collections.singleton(buyOneGetOneFreeDiscountedItemByUnit()));
     }
 
     private static Arguments noItems() {
@@ -78,5 +86,9 @@ class BasketTest {
 
     private static Item twoHundredGramsOfPickAndMix() {
         return aKiloOfPickAndMix().weighing(new BigDecimal(".2"));
+    }
+
+    private static Item buyOneGetOneFreeDiscountedItemByUnit() {
+         return new BuyOneGetOneFreeDiscountedItemByUnit(new Product("PintOfMilk", new BigDecimal("0.49")));
     }
 }
