@@ -3,6 +3,10 @@
 The purpose of this code was a technical test for Policy Expert.
 
 
+### How to read this code
+Hopepfully the following flow will allow the reader to understand the code organisation I was aiming for.
+Basket -> TotalCalculator -> TotalCalculator::discountCalculator -> CalculateTotalDiscounts -> BuyOneGetOneFreeDiscountCalculator
+
 ### Design
 * Top level class which encapsulates applying all discounts is kata.supermarket.discounts.CalculateTotalDiscounts
 * CalculateTotalDiscounts applies individual discounts to the basket items
