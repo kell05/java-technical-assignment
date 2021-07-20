@@ -4,8 +4,9 @@ The purpose of this code was a technical test for Policy Expert.
 
 
 ### Design
-Each new 
-
+* Top level class which encapsulates applying all discounts is kata.supermarket.discounts.CalculateTotalDiscounts
+* CalculateTotalDiscounts applies individual discounts to the basket items
+* Identification of Items which should be considered for discount are subclasses of ItemByWeight (KiloOfVegetablesForHalfPriceDiscountedItemByWeight) and ItemByUnit (BuyOneGetOneFreeDiscountedItemByUnit)    
 
 
 ### Order of tasks undertaken
